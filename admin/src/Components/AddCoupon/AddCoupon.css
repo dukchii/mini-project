@@ -1,0 +1,251 @@
+.add-coupon-container {
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-coupon-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #ff4141;
+  display: inline-block;
+  padding-bottom: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.coupon-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff4141;
+  outline: none;
+  background-color: #fff;
+}
+
+.input-code {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .half-width {
+  flex: 1;
+}
+
+/* --- Nút Submit --- */
+.add-coupon-btn {
+  padding: 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.add-coupon-btn:hover:not(:disabled) {
+  background-color: #1e7e34;
+}
+
+.add-coupon-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* --- Thông báo --- */
+.coupon-admin-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.coupon-admin-message.msg-success {
+  background-color: #e9f8ed;
+  color: #388e3c;
+  border: 1px solid #388e3c;
+}
+
+.coupon-admin-message.msg-error {
+  background-color: #fde8e8;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .add-coupon-container {
+    margin: 20px 10px;
+    padding: 20px;
+  }
+}
+.coupon-summary {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid #d4edda;
+  background-color: #f0fff4; /* Màu xanh nhẹ nhàng */
+  border-radius: 8px;
+}
+
+.coupon-summary h3 {
+  color: #155724;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.coupon-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coupon-summary td {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.coupon-summary td:first-child {
+  width: 30%;
+  font-weight: 500;
+}
+.coupon-summary {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid #d4edda;
+  background-color: #f0fff4; /* Màu xanh nhẹ nhàng */
+  border-radius: 8px;
+}
+
+.coupon-summary h3 {
+  color: #155724;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.coupon-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coupon-summary td {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.coupon-summary td:first-child {
+  width: 30%;
+  font-weight: 500;
+}
+
+/* Style cho phần Danh sách Coupon */
+.list-coupon-section {
+  padding-top: 20px;
+}
+
+.coupon-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.coupon-table th,
+.coupon-table td {
+  border: 1px solid #ddd;
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.coupon-table th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 600;
+}
+
+.coupon-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.coupon-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.coupon-code-col {
+  width: 15%;
+  font-size: 15px;
+  color: #007bff;
+}
+
+.discount-value {
+  font-weight: bold;
+  color: #28a745;
+}
+
+.status-active {
+  color: green;
+  font-weight: 500;
+}
+
+.status-expired {
+  color: red;
+  font-weight: 500;
+}
+
+.refresh-btn {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #6c757d;
+}
+
+.refresh-btn:hover {
+  background-color: #5a6268;
+}

@@ -1,0 +1,252 @@
+/* GENERAL LAYOUT */
+.customer-list {
+  padding: 30px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.customer-list h2 {
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.customer-error {
+  color: #dc3545;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TABLE STYLES */
+.customer-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.customer-table th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.customer-table tbody tr:hover {
+  background-color: #f1f8ff;
+}
+
+.customer-name {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.customer-spent {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* VIEW ORDERS BUTTON */
+.view-orders-btn {
+  padding: 6px 12px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.view-orders-btn:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.view-orders-btn:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* ORDER DETAILS MODAL (Hóa đơn) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  color: #007bff;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+/* Loading/Error Modal */
+.loading-modal,
+.error-modal {
+  text-align: center;
+  padding: 50px;
+  font-weight: bold;
+}
+.error-modal button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Order Cards in Modal */
+.admin-order-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background-color: #fefefe;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.admin-order-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.admin-order-card h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #555;
+}
+
+.item-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 5px 0 15px 0;
+  border-left: 3px solid #007bff;
+}
+
+.item-list li {
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+.order-totals {
+  text-align: right;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+.order-totals p {
+  margin: 3px 0;
+}
+
+.discount-value {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.final-total {
+  font-size: 18px;
+  color: #28a745;
+}
+
+/* Status Badges */
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.status-pending {
+  background-color: #ffc107;
+  color: #333;
+}
+.status-completed {
+  background-color: #28a745;
+  color: white;
+}
+.status-cancelled {
+  background-color: #dc3545;
+  color: white;
+}
+.status-shipping {
+  background-color: #007bff;
+  color: white;
+}
+
+/* MEDIA QUERY (Responsive) */
+@media (max-width: 768px) {
+  .customer-list {
+    padding: 15px;
+  }
+  .customer-table th,
+  .customer-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+}

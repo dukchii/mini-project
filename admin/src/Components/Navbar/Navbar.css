@@ -1,0 +1,42 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Đẩy logo sang trái, profile sang phải */
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Bóng đổ nhẹ */
+  height: 80px; /* Chiều cao cố định */
+}
+
+/* Logo */
+.nav-logo {
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Hình ảnh Profile (Cần thiết kế) */
+.nav-profile {
+  height: 50px; /* Kích thước phù hợp */
+  width: 50px;
+  border-radius: 50%; /* **Làm cho hình ảnh tròn** */
+  cursor: pointer;
+  object-fit: cover; /* Đảm bảo ảnh hiển thị đẹp trong hình tròn */
+  border: 2px solid #6a1b9a; /* Viền tím nhẹ làm nổi bật */
+  transition: transform 0.2s;
+}
+
+.nav-profile:hover {
+  transform: scale(1.05); /* Hiệu ứng khi rê chuột */
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+  .nav-logo {
+    height: 40px;
+  }
+  .nav-profile {
+    height: 40px;
+    width: 40px;
+  }
+}

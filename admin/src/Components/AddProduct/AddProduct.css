@@ -1,0 +1,191 @@
+:root {
+  --primary-color: #6a1b9a; /* Màu tím đậm cho nút chính và focus */
+  --secondary-color: #4caf50; /* Màu xanh lá cho nút thêm toàn bộ */
+  --text-color: #ffffff;
+  --label-color: #333333; /* Màu tiêu đề đậm hơn */
+  --border-color: #e0e0e0;
+  --font-family: "Inter", sans-serif;
+  --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-product {
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 700px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho container của mỗi trường nhập liệu */
+.addproduct-itemfield {
+  width: 100%;
+  margin-bottom: 20px; /* Thêm khoảng cách dưới */
+}
+
+/* Tiêu đề (Label) */
+.addproduct-itemfield p {
+  color: var(--label-color);
+  font-size: 18px; /* Lớn hơn */
+  font-weight: 600; /* Đậm hơn */
+  margin-bottom: 8px;
+}
+
+/* Khung nhập liệu (Input) */
+.addproduct-itemfield input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  border-radius: 8px; /* Bo tròn hơn */
+  padding-left: 15px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-family: var(--font-family);
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+/* Hiệu ứng khi focus vào input */
+.addproduct-itemfield input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.2); /* Shadow màu tím nhẹ */
+}
+
+/* Khu vực Giá */
+.addproduct-price {
+  display: flex;
+  gap: 40px;
+}
+
+/* Select Box */
+.add-product-selector {
+  padding: 10px;
+  width: 150px; /* Rộng hơn */
+  height: 50px;
+  font-size: 15px;
+  color: var(--label-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.add-product-selector:focus {
+  border-color: var(--primary-color);
+}
+
+/* Hình ảnh Thumbnail */
+.addproduct-thumnail-img {
+  height: 120px;
+  width: 120px;
+  border-radius: 10px;
+  object-fit: contain;
+  margin: 10px 0px;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-light);
+}
+
+.addproduct-btn {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng nhẹ */
+  width: auto; /* Mặc định để chiều rộng tự điều chỉnh */
+}
+
+/* 1. CSS cho Nút "Thêm" (Nút tiêu chuẩn, màu Tím) */
+.addproduct-btn:not(.addAll-Product) {
+  background-color: var(--primary-color);
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, #ab47bc 100%);
+}
+
+.addproduct-btn:not(.addAll-Product):hover {
+  /* Hiệu ứng khi rê chuột: Dùng scale nhẹ để tạo cảm giác nút "phồng lên" */
+  transform: scale(1.03);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1); /* Tăng độ sáng khi hover */
+}
+
+.addproduct-btn:not(.addAll-Product):active {
+  /* Hiệu ứng khi nhấn: Thu nhỏ nhẹ để tạo phản hồi */
+  transform: scale(0.98);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. CSS cho Nút "Thêm toàn bộ sản phẩm từ mẫu" (Nút quan trọng, màu Xanh Lá) */
+.addAll-Product {
+  background-color: var(--secondary-color);
+  background-image: linear-gradient(45deg, var(--secondary-color) 0%, #81c784 100%);
+  border: 2px solid #ffffff; /* Viền trắng để nổi bật */
+  letter-spacing: 0.5px; /* Giãn chữ nhẹ */
+}
+
+.addAll-Product:hover {
+  /* Hiệu ứng nhảy lên mạnh hơn khi hover */
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  filter: saturate(1.2); /* Tăng độ bão hòa màu */
+}
+
+.addAll-Product:active {
+  transform: scale(1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS cho container chứa các nút (BẮT BUỘC) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* ==================================== */
+/* RESPONSIVE DESIGN (Dưới 768px) */
+/* ==================================== */
+@media (max-width: 768px) {
+  /* Xếp chồng các nút dọc và căn chỉnh lại kích thước trên mobile */
+  .button-container {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+
+  /* Kéo dãn các nút để chúng chiếm hết chiều rộng */
+  .addproduct-btn {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 8px 0;
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+
+  /* Điều chỉnh nhẹ hiệu ứng hover trên mobile */
+  .addproduct-btn:hover {
+    transform: scale(1.01);
+  }
+
+  .addAll-Product:hover {
+    transform: scale(1.02);
+  }
+
+  /* Đảm bảo khung cha add-product cũng responsive */
+  .add-product {
+    width: auto;
+    padding: 30px;
+    margin: 20px;
+  }
+}

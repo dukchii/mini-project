@@ -1,0 +1,149 @@
+/* Container chính */
+.total-due-container {
+  width: 90%;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f8f9fa; /* Nền nhẹ */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.total-due-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #343a40;
+  font-size: 28px;
+  border-bottom: 3px solid #007bff; /* Viền dưới màu xanh nổi bật */
+  padding-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+}
+
+/* --- Khối Tóm Tắt (Summary Cards) --- */
+.summary-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  flex: 1;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Hiệu ứng nổi */
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Màu sắc cụ thể cho từng thẻ */
+.total-revenue {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Xanh dương cho Doanh thu */
+}
+
+.total-profit {
+  background: linear-gradient(135deg, #28a745, #1e7e34); /* Xanh lá cho Lợi nhuận */
+}
+.monthly-breakdown {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Đổ bóng nhẹ cho cảm giác nổi */
+  margin-top: 20px;
+}
+
+.monthly-breakdown h2 {
+  color: #007bff; /* Màu xanh nổi bật */
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.monthly-breakdown table {
+  width: 100%;
+  border-collapse: separate; /* Sử dụng separate để có border-radius đẹp hơn */
+  border-spacing: 0;
+  margin-top: 10px;
+}
+
+/* Header của bảng */
+.monthly-breakdown thead tr {
+  background-color: #343a40; /* Nền tối cho header */
+  color: white;
+}
+
+.monthly-breakdown th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Làm tròn góc cho header */
+.monthly-breakdown thead th:first-child {
+  border-top-left-radius: 8px;
+}
+.monthly-breakdown thead th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Thân bảng */
+.monthly-breakdown tbody tr {
+  /* Đảm bảo border dưới cho mỗi dòng */
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.2s ease;
+}
+
+.monthly-breakdown tbody tr:last-child {
+  border-bottom: none; /* Loại bỏ border dưới cho dòng cuối */
+}
+
+.monthly-breakdown tbody tr:hover {
+  background-color: #f1f1f1; /* Thay đổi màu khi di chuột */
+}
+
+.monthly-breakdown td {
+  padding: 12px 15px;
+  text-align: left;
+  color: #495057;
+}
+
+/* Định dạng cột số (Revenue và Profit) */
+.monthly-breakdown td:nth-child(2), /* Cột Doanh Thu */
+.monthly-breakdown td:nth-child(3) {
+  /* Cột Lợi Nhuận */
+  text-align: left;
+  font-weight: 500;
+  font-family: monospace, sans-serif; /* Sử dụng font cố định để số thẳng hàng */
+}
+
+/* Highlight cột lợi nhuận */
+.monthly-breakdown td:nth-child(3) {
+  color: #28a745; /* Màu xanh lá cây cho lợi nhuận */
+}
+
+/* Định dạng dòng "Chưa có dữ liệu" */
+.monthly-breakdown tbody tr td[colspan="3"] {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #6c757d;
+}
